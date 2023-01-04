@@ -55,9 +55,6 @@ document.getElementById('color-hexes').addEventListener('click', (e)=>{
         if(color.id == e.target.id){
             console.log(color.hex)
             navigator.clipboard.writeText(color.hex)
-                .then(() => {
-                alert("Hex color copied to clipboard");
-            });
         }
     })
 })

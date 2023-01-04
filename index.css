@@ -1,5 +1,5 @@
 body {
-    margin: 50px auto;
+    margin: 20px auto;
     box-sizing: border-box;
     width: 550px;
     font-family: inter;
@@ -14,6 +14,7 @@ form{
     justify-content: space-around;
     align-items: center;
     display: flex;
+    margin-bottom: 0;
 }
 
 form, .color-hexes{
@@ -69,7 +70,8 @@ form, .color-hexes{
 }
 
 .color-box{
-    height: 400px;
+    height: 350px;
+    margin-top: 0;
 }
 
 .color-hex{
@@ -81,15 +83,19 @@ form, .color-hexes{
     cursor: pointer;
 }
 
+h3{
+    background-color: green;
+}
+
 @media (min-width: 600px){
     body{
         width: 80vw;
     }
     .color-box{
-    height: 600px;
+        height: 450px;
     }
     .color-button{
-    width: 180px;
-    font-size: 16px
+        width: 180px;
+        font-size: 16px
     }
 }
