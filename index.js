@@ -6,7 +6,7 @@ let colorArray = [
     {hex:"#F55A5A", id:4}
     ]
 
-/*function will render the HTML section for the 5 color boxes & color hex numbers below*/
+/*function will render the HTML section for the 5 color boxes & 5 color hex numbers below the boxes*/
 function renderColors(){
     let boxes = ''
     let hexes = ''
@@ -25,7 +25,7 @@ function renderColors(){
 }
 renderColors()
 
-/*Clears the colorArray, gets the values selected for color and mode by user, creates a new API address with users choices and runs the fetchColors function*/
+/*Clears the current colorArray, gets the new values selected for color and mode by user, creates a new API address with users choices and runs the fetchColors function*/
 document.getElementById('color-button').addEventListener('click', function(e){
     e.preventDefault()
     colorArray=[]
@@ -50,10 +50,10 @@ function fetchColors(apiAdd){
     })
 }
 
+/*Copies the Hex number to the clipboard when clicked*/
 document.getElementById('color-hexes').addEventListener('click', (e)=>{
     colorArray.forEach(color =>{
         if(color.id == e.target.id){
-            console.log(color.hex)
             navigator.clipboard.writeText(color.hex)
         }
     })
